@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather.App</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fontawesome Linkage -->    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS LINKAGE -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+<body id="body-area">
+    <!-- NAV START -->
+    <nav> 
+        <div class="nav-wrapper">
+            <div class="sidenav-trigger" id="nav-row-div">
+                <a id="nav-row" href="index.html" class="brand-logo">
+                    <i id="nav-brand-icon" class="fas fa-cloud-rain"></i>
+                    &nbsp;Weather.App
+                </a>
+            </div>
+        </div>
+    </nav>
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="assets/clouds.jpg">
+                </div>
+                <img class="circle" src="assets/gatito.jpg">
+                <span id="nav-row-side" class="white-text name"><i class="fas fa-cloud-rain"></i>&nbsp;Weather.App</span>
+                <a href="about.html"><span id="nav-row-about" class="white-text name">About</span></a>
+            </div>
+        </li>
+        <li><a class="subheader">Saved.Cities</a></li>
+        <div>
+            <li><a id="saved-cities" class="waves-effect" href="#!">Portland</a></li>
+            <li><a id="saved-cities" class="waves-effect" href="#!">Charlotte</a></li>
+            <li><a id="saved-cities" class="waves-effect" href="#!">San Diego</a></li>
+            <li><a id="saved-cities" class="waves-effect" href="#!">Tijuana</a></li>
+        </div>
+    </ul>
+    <!-- NAV END -->
+    <!-- MAIN AREA START -->
+    <div class="container">
+
+
+
+        
+    </div>
+    <!-- MAIN AREA END -->
+    <!-- STICKY FOOTER START -->
+    <footer class="page-footer">
+        <div id="main-footer-cp" class="footer-copyright">
+            <div id="main-footer"class="container right-align">Copyright © Gatito <i class="fas fa-cat"></i></div>
+        </div>
+    </footer>
+    <!-- STICKY FOOTER END -->
+
+    <!-- JQEURY LINKAGE -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- MOMENT.JS LINKAGE -->
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>     $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.modal').modal();
+            $('.dropdown-trigger').dropdown();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather.App</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fontawesome Linkage -->    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <!-- CSS LINKAGE -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+<body id="body-area">
+    <!-- NAV START -->
+    <nav> 
+        <div class="nav-wrapper">
+            <div data-target="slide-out" class="sidenav-trigger" id="nav-row-div">
+                <a id="nav-row" href="#" class="brand-logo">
+                    <i id="nav-brand-icon" class="fas fa-wind"></i>
+                    &nbsp;Weather.App
+                </a>
+            </div>
+        </div>
+    </nav>
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div id="sidenav-head" class="user-view">
+                <div class="background">
+                    <img src="assets/clouds.jpg">
+                </div>
+                <img class="circle" src="assets/gatito.jpg">
+                <span id="nav-row-side" class="white-text name"><i class="fas fa-wind"></i>&nbsp;Weather.App</span>
+                <a href="about.html"><span id="nav-row-about" class="white-text name">About</span></a>
+            </div>
+        </li>
+        <div id="sidenav-input" class="input-field">
+            <input id="sidenav-search" type="search" maxlength="20">
+            <label id="sidenav-search-icon" class="label-icon" for="search">
+                <i class="material-icons">search</i>
+            </label>
+            <i id="sidenav-search-icon-close" class="material-icons">close</i>
+        </div>
+        <li><a id="sidenav-subheader" class="subheader">Saved.Cities</a></li>
+        <div>
+            <li><a id="saved-cities" class="waves-effect" href="#!">Portland</a></li>
+            <li><a id="saved-cities" class="waves-effect" href="#!">Charlotte</a></li>
+            <li><a id="saved-cities" class="waves-effect" href="#!">San Diego</a></li>
+            <li><a id="saved-cities" class="waves-effect" href="#!">Tijuana</a></li>
+        </div>
+    </ul>
+    <!-- NAV END -->
+    <!-- MAIN AREA START -->
+    <main>
+        <div class="container">
+            <div class="row"></div>
+            <div class="row">
+                <div class="card blue-grey darken-1">
+                    <div id="w-card" class="card-content white-text">
+                        <div id="w-card-title" class="card-action">
+                            <h3 id="w-city">CITYNAME</h3>
+                        </div>
+                        <div id="w-cardrow" class="card-action">
+                            <h4 id="w-date">Today's Date</h4>
+                        </div>
+                        <div id="w-cardrow" class="card-action">
+                            <h4 id="w-temp">Temp</h4>
+                        </div>
+                        <div id="w-cardrow" class="card-action">
+                            <h4 id="w-humi">Humidity</h4>
+                        </div>
+                        <div id="w-cardrow" class="card-action">
+                            <h4 id="w-wind">Wind</h4>
+                        </div>
+                        <div id="w-cardrow" class="card-action">
+                            <h4 id="w-uvi">Uv.Index</h4>
+                        </div>
+                        <div id="w-cardrow" class="card-action">
+                            <h4 id="w-five">Five.Day.Forecast</h4>
+                        </div>
+                        <div id="w-cardfore" class="card-action">
+                            <div id="w-sq-row" class="row">
+                                <div id="w-sqe-0" class="col s12 m4 l2">
+                                    <p id="w-sq-0" class="z-depth-5 shadow-demo">DayName0<br><i id="w-sqi-0" class="fas fa-cloud"></i><br>Month/DD<br>666°F</p>
+                                </div>
+                                <div id="w-sqe-1" class="col s12 m4 l2">
+                                    <p id="w-sq-1" class="z-depth-5 shadow-demo">DayName1<br><i id="w-sqi-1" class="fas fa-cloud-sun-rain"></i><br>Month/DD<br>777°C</p>
+                                </div>
+                                <div id="w-sqe-2" class="col s12 m4 l2">
+                                    <p id="w-sq-2" class="z-depth-5 shadow-demo">DayName2<br><i id="w-sqi-2" class="fas fa-wind"></i><br>Month/DD<br>888°F</p>
+                                </div>
+                                <div id="w-sqe-3" class="col s12 m4 l2">
+                                    <p id="w-sq-3" class="z-depth-5 shadow-demo">DayName3<br><i id="w-sqi-3" class="fas fa-cloud-rain"></i><br>Month/DD<br>999°C</p>
+                                </div>
+                                <div id="w-sqe-4" class="col s12 m4 l2">
+                                    <p id="w-sq-4" class="z-depth-5 shadow-demo">DayName4<br><i id="w-sqi-4" class="fas fa-snowflake"></i><br>Month/DD<br>000°F</p>
+                                </div>
+                                <!-- <div id="w-sqe-5" class="col s12 m4 l2"> -->
+                                    <!-- <p id="w-sq-5" class="z-depth-5 shadow-demo"> -->
+                                    <!-- </p> -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div id="w-cardrow-sw" class="card-action">
+                            <div class="switch">
+                                <label id="w-sw-lbl">
+                                    °F
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    °C
+                                </label>
+                            </div>
+                        </div>
+                        <div id="w-cardrow-cb" class="card-action">
+                            <p>
+                                <label>
+                                    <input type="checkbox" class="filled-in" checked="checked"/>
+                                    <span id="w-sw-cb">Set.As.Default</span>
+                                </label>
+                            </p>
+                        </div>
+                        <div id="w-cardrow-btn" class="card-action">
+                            <a id="w-btn-pre" class="waves-effect waves-light orange darken-4 btn-large">City.Presets</a>
+                            <a id="w-btn-dir" class="waves-effect waves-light btn-large">Save.To.Directory</a>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="row"></div>
+            <div class="row"></div>
+        </div>
+    </main>
+    </div>
+    <!-- MAIN AREA END -->
+    <!-- STICKY FOOTER START -->
+    <footer class="page-footer">
+        <div id="main-footer-cp" class="footer-copyright">
+            <div id="main-footer"class="container right-align">Copyright © Gatito <i class="fas fa-cat"></i></div>
+        </div>
+    </footer>
+    <!-- STICKY FOOTER END -->
+
+    <!-- JQEURY LINKAGE -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- MOMENT.JS LINKAGE -->
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>     $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(window).scrollTop() >150) {
+                    $('nav').addClass('sticky-nav');
+                }
+                else {
+                    $('nav').removeClass('sticky-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

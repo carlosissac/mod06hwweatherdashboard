@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather.App</title>
-    <!-- Compiled and minified CSS -->
+    <!-- MATERIALIZE CSS LINKAGE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Fontawesome Linkage -->    
+    <!-- FONTAWESOME LINKAGE -->    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css">
-    <!-- Google fonts -->
+    <!-- GOOGLE FONTS LINKAGE -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <!-- CSS LINKAGE -->
@@ -39,14 +39,11 @@
             </div>
         </li>
         <div id="sidenav-input" class="input-field">
-            <input id="sidenav-search" type="search" maxlength="20">
-            <label id="sidenav-search-icon" class="label-icon" for="search">
-                <i class="material-icons">search</i>
-            </label>
-            <i id="sidenav-search-icon-close" class="material-icons">close</i>
+            <input id="sidenav-search" type="search" class="autocomplete" maxlength="20" placeholder="Click To Search City ...">
         </div>
-        <li><a id="sidenav-subheader" class="subheader">Saved.Cities</a></li>
-        <div>
+        <li><a id="sidenav-clearsearch" class="waves-effect waves-light btn-small">Clear Search</a></li>
+        <li><a id="sidenav-subheader" class="subheader">My.Presets</a></li>
+        <div id="sidenav-city-list">
             <li><a id="saved-cities" class="waves-effect" href="#!">Portland</a></li>
             <li><a id="saved-cities" class="waves-effect" href="#!">Charlotte</a></li>
             <li><a id="saved-cities" class="waves-effect" href="#!">San Diego</a></li>
@@ -100,8 +97,7 @@
                                     <p id="w-sq-4" class="z-depth-5 shadow-demo">DayName4<br><i id="w-sqi-4" class="fas fa-snowflake"></i><br>Month/DD<br>000°F</p>
                                 </div>
                                 <!-- <div id="w-sqe-5" class="col s12 m4 l2"> -->
-                                    <!-- <p id="w-sq-5" class="z-depth-5 shadow-demo"> -->
-                                    <!-- </p> -->
+                                    <!-- <p id="w-sq-5" class="z-depth-5 shadow-demo">DayName5<br><i id="w-sqi-4" class="fas fa-cloud-showers-heavy"></i><br>Month/DD<br>111°F</p> -->
                                 <!-- </div> -->
                             </div>
                         </div>
@@ -124,8 +120,9 @@
                             </p>
                         </div>
                         <div id="w-cardrow-btn" class="card-action">
-                            <a id="w-btn-pre" class="waves-effect waves-light orange darken-4 btn-large">City.Presets</a>
-                            <a id="w-btn-dir" class="waves-effect waves-light btn-large">Save.To.Directory</a>
+                            <a id="w-btn-clear" class="waves-effect waves-light red darken-4 btn-large">Clear.Presets</a>
+                            <a id="w-btn-test" class="waves-effect waves-light orange darken-4 btn-large">Test.Presets</a>
+                            <a id="w-btn-add" class="waves-effect waves-light btn-large">Add.To.Presets</a>
                         </div>
                     </div>
                 </div>    
@@ -136,6 +133,22 @@
     </main>
     </div>
     <!-- MAIN AREA END -->
+
+    <!-- MODAL NO DEFAULT -->
+    <!-- Modal Trigger -->
+    <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+    <!-- Modal Structure -->
+    <!-- <div id="modal1" class="modal"> -->
+        <!-- <div class="modal-content"> -->
+            <!-- <h4>Modal Header</h4> -->
+            <!-- <p>A bunch of text</p> -->
+        <!-- </div> -->
+        <!-- <div class="modal-footer"> -->
+            <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a> -->
+        <!-- </div> -->
+    <!-- </div> -->
+    <!-- MODAL NO DEFAULT -->
+
     <!-- STICKY FOOTER START -->
     <footer class="page-footer">
         <div id="main-footer-cp" class="footer-copyright">
@@ -143,21 +156,16 @@
         </div>
     </footer>
     <!-- STICKY FOOTER END -->
-
     <!-- JQEURY LINKAGE -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- MOMENT.JS LINKAGE -->
     <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>     $(document).ready(function(){
-        $('.sidenav').sidenav();
-    });
-    </script>
     <script>
         $(document).ready(function(){
             $(window).scroll(function(){
-                if($(window).scrollTop() >150) {
+                if($(window).scrollTop()>150) {
                     $('nav').addClass('sticky-nav');
                 }
                 else {
@@ -166,5 +174,14 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function(event) {
+            $('.sidenav').sidenav();
+        });
+    </script>
+    <script src="./assets/weather.js"></script>
+    <script src="./assets/presets.js"></script>
+    <script src="./assets/cityContainerSmall.js"></script>
+    <script src="./assets/uiHandler.js"></script>
 </body>
 </html>

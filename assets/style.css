@@ -51,6 +51,10 @@
     text-decoration: underline;
 }
 
+#sidenav-search {
+    background-color: white;
+}
+
 #w-card-title {
     padding: 10px;
 }
@@ -175,14 +179,6 @@
     width: 86%;
 }
 
-#sidenav-search-icon {
-    top: 0.85rem;
-}
-
-#sidenav-search-icon-close {
-    top: 0.65rem;
-}
-
 #sidenav-subheader {
     text-align: center;
     font-size: large;
@@ -190,6 +186,7 @@
 
 #saved-cities {
     text-align: right;
+    font-size: large;
 }
 
 #slide-out {
@@ -304,17 +301,13 @@
 /*MACBOOKPRO*/
 @media (min-height: 798px) {
     
-    /*#nav-row {
-        left:  0px;
-    }*/
-
     @media (min-width: 992px) {
         
         #nav-row {
             left:  0px;
         }
         #w-cardfore {
-            padding-left: 0rem;
+            padding-left: 4rem;
         }
     }
 }

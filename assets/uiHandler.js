@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     $("#w-btn-test").click(function(event) {
         //MODAL WARNING SHOW CLICK OUTSIDE HIDE
-        p.
+        //
     });
 
     $("#w-btn-clear").click(function(event) {

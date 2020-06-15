@@ -4,11 +4,24 @@ $(document).ready(function() {
 
 
 
+
+
+
     p = presets;
+
+    $("#w-btn-rem").click(function(event) {
+        //MODAL WARNING SHOW CLICK OUTSIDE HIDE
+        //console.log(p.setDefault()
+    });
+
+    $("#w-btn-add").click(function(event) {
+        //MODAL WARNING SHOW CLICK OUTSIDE HIDE
+        console.log(p.getDefault());
+    });
 
     $("#w-btn-test").click(function(event) {
         //MODAL WARNING SHOW CLICK OUTSIDE HIDE
-        //
+        p.clearLSLoadTestPresets();
     });
 
     $("#w-btn-clear").click(function(event) {
@@ -17,7 +30,6 @@ $(document).ready(function() {
     });
 
     /////////// AUTOCOMPLETE START ////////////
-    //cs = cityStorage; >>>> Large File 
     cc = cityContainerSmall;
 
     let sugg = [];
